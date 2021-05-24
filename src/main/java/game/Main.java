@@ -34,7 +34,11 @@ public class Main extends Application {
     GraphicsContext gc;
 
 
+
+
     public void start(Stage primaryStage) {
+        Controlleur controlleur=new Controlleur(primaryStage);
+        /*
         try {
             newFood();
 
@@ -77,6 +81,9 @@ public class Main extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
+
+         */
+
     }
 
 

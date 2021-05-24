@@ -17,7 +17,7 @@
                   <Image url="@../img/snake.png" />
                </image>
             </ImageView>
-            <Button layoutX="225.0" layoutY="262.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="136.0" style="-fx-background-color: green;" text="PLAY" textFill="WHITE" />
+            <Button  onMouseClicked="#jouer" layoutX="225.0" layoutY="262.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="136.0" style="-fx-background-color: green;" text="PLAY" textFill="WHITE" />
             <Button layoutX="225.0" layoutY="323.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="136.0" style="-fx-background-color: green;" text="SCORE" textFill="WHITE" />
             <Text fill="#11902a" layoutX="246.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SNAKE GAME" wrappingWidth="128.228515625" />
          </children>
