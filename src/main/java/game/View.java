@@ -1,10 +1,8 @@
 package game;
 
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
-import javafx.scene.text.Text;
 
 public class View {
 
@@ -55,7 +53,7 @@ public class View {
 
         // eat food
         if (Main.foodX == Main.snake.get(0).x && Main.foodY == Main.snake.get(0).y) {
-            Main.snake.add(new Corner(-1, -1));
+            Main.snake.add(new Body(-1, -1));
             Main.newFood();
         }
 
@@ -99,7 +97,7 @@ public class View {
         gc.fillOval(Main.foodX * Main.cornersize, Main.foodY * Main.cornersize, Main.cornersize, Main.cornersize);
 
         // snake
-        for (Corner c : Main.snake) {
+        for (Body c : Main.snake) {
           //  gc.setFill(Color.LIGHTGREEN);
            // gc.fillRect(c.x * Main.cornersize, c.y * Main.cornersize, Main.cornersize - 1, Main.cornersize - 1);
             gc.setFill(Color.GREEN);

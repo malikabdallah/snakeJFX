@@ -7,7 +7,6 @@ import java.util.Random;
 
 import javafx.animation.AnimationTimer;
 import javafx.application.Application;
-import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
@@ -27,7 +26,7 @@ public class Main extends Application {
     static int foodX = 0;
     static int foodY = 0;
     static int cornersize = 25;
-    static List<Corner> snake = new ArrayList<>();
+    static List<Body> snake = new ArrayList<>();
     static Direction direction = Direction.left;
     static boolean gameOver = false;
     static Random rand = new Random();
@@ -66,9 +65,9 @@ public class Main extends Application {
             });
 
             // add start snake parts
-            snake.add(new Corner(width / 2, height / 2));
-            snake.add(new Corner(width / 2, height / 2));
-            snake.add(new Corner(width / 2, height / 2));
+            snake.add(new Body(width / 2, height / 2));
+            snake.add(new Body(width / 2, height / 2));
+            snake.add(new Body(width / 2, height / 2));
 
 
             //If you do not want to use css style, you can just delete the next line.
@@ -87,7 +86,7 @@ public class Main extends Application {
             foodX = rand.nextInt(width);
             foodY = rand.nextInt(height);
 
-            for (Corner c : snake) {
+            for (Body c : snake) {
                 if (c.x == foodX && c.y == foodY) {
                     continue start;
                 }

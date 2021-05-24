@@ -1,11 +1,11 @@
 package game;
 
-public class Corner {
+public class Body {
 
      int x;
      int y;
 
-    public Corner(int x, int y) {
+    public Body(int x, int y) {
         this.x = x;
         this.y = y;
     }
