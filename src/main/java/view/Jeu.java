@@ -10,6 +10,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
@@ -37,6 +38,8 @@ public class Jeu {
     public static Random rand = new Random();
     public static Canvas canvas;
     public static GraphicsContext gc;
+    public  Button restart;
+    public  Button menu;
 
     public static Jeu creerEtAfficher(Controlleur c, Stage laStageUnique) {
         URL location = Jeu.class.getResource("/view/jeu.fxml");
@@ -84,11 +87,13 @@ public class Jeu {
             snake.add(new Body(width / 2, height / 2));
             snake.add(new Body(width / 2, height / 2));
 
-
             //If you do not want to use css style, you can just delete the next line.
             laStageUnique.setScene(scene);
             laStageUnique.setTitle("SNAKE GAME");
             laStageUnique.show();
+
+
+
 
         return vue;
     }
@@ -112,4 +117,7 @@ public class Jeu {
     }
 
 
+    public static void afficherButton() {
+
+    }
 }

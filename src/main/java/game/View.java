@@ -16,6 +16,7 @@ public class View {
             gc.setFill(Color.GOLD);
             gc.setFont(new Font("", 30));
             gc.fillText("Score "+(Jeu.snake.size()-3),100,280);
+            Jeu.afficherButton();
             return;
         }
 
